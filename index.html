@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/Logo.png" type="image/x-icon">
+    <title>NewsNOT - HOME</title>
+    <script src="https://kit.fontawesome.com/75a63ff7a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./initial.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav>
+        <a class="logo" href="index.html">
+            <img src="./images/Logo.png" alt="" width="25px" height="25px">
+            <span>NewsNot</span>
+        </a>
+        <ul>
+            <li class="nav-link"> <a href="" title="Location">Home</a> </li>
+            <li class="nav-link"> <a href="#Mission" title="Location">Mission</a> </li>
+            <li class="nav-link"> <a href="#News" title="Location">News</a> </li>
+            <li class="nav-link"> <a href="" title="Location">Partners</a> </li>
+            <li class="nav-link"> <a href="" title="Dark Theme">About Us</a> </li>
+        </ul>
+        <button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <section id="Home">
+        <div>
+            <h1>Stay Updated with the Latest Gaming News</h1>
+            <p>Discover the hottest games, industry updates, and console releases.</p>
+            <button>Explore</button>
+            <button>Sign Up</button>
+        </div>
+        <div>
+            <img src="./images/heroImg.png" alt="">
+        </div>
+    </section>
+
+    <section id="Mission">
+        <button>
+            <h2>NewsNot Mission</h2>
+            <p>NewsNot is your go-to source for the latest news and information on the gaming industry. We provide up-to-date coverage on games, gaming companies, and consoles, keeping you in the loop with all the exciting developments.</p>
+        </button>
+    </section>
+
+    <section id="News">
+        <span>Latest</span>
+        <h2>Stay Updated with NewsNot</h2>
+        <p>Get the latest news on video games and more</p>
+        <div id="NewsCards">
+            <div class="Newscard">
+                <img src="./images/demoCards/CardImg-1.png" alt="">
+                <h3>New Game Releases and Updates</h3>
+                <p>Stay informed about the latest games, consoles, and industry news</p>
+            </div>
+            <div class="Newscard">
+                <img src="./images/demoCards/CardImg-2.png" alt="">
+                <h3>Game Review: Cyberpunk 2077</h3>
+                <p>Discover the highs and lows of the highly anticipated Cyberpunk 2077</p>
+            </div>
+            <div class="Newscard">
+                <img src="./images/demoCards/CardImg-3.png" alt="">
+                <h3>Top 10 Best-Selling Games of 2021</h3>
+                <p>Find out which games dominated the charts and broke records in 2021</p>
+            </div>
+        </div>
+        <a href="./News/news.html" target="_blank">View All</a>
+    </section>
+
+    <section id="About Us">
+
+    </section>
+    <div style="height: 100px; width: 100px;"></div>
+
+    <button class="scrollToTop" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</body>
+<script>
+    function scrollToTop() {
+        window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+    }
+    const scroller= document.querySelector('.scrollToTop');
+    window.addEventListener("scroll", ()=> {
+        if(window.pageYOffset > 100) {
+            scroller.classList.add("active");
+        } else {
+            scroller.classList.remove("active");
+        }
+    })
+</script>
+</html>

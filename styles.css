@@ -1,0 +1,203 @@
+#Home {
+    width: 90%;
+    padding: 2% 5%;
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#Home h1 {
+    font-size: 5rem;
+    margin: 2rem 0 1rem 0;
+}
+#Home img {
+    height: 75vh;
+}
+#Home button {
+    background-color: #381752;
+    color: white;
+    font-size: 1.2rem;
+    padding: 2% 5%;
+    border: 0;
+    border-radius: 8px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: all 0.15s;
+}
+#Home button:hover {
+    scale: 1.1;
+}
+@media (max-width:1250px) {
+    #Home h1 {
+        font-size: 4rem;
+    }
+    #Home img {
+        height: 65vh;
+    }
+}
+@media (max-width:1024px) {
+    #Home h1 {
+        font-size: 3rem;
+    }
+    #Home img {
+        height: 50vh;
+    }
+}
+@media (max-width:768px) {
+    #Home h1 {
+        font-size: 2.5rem;
+    }
+    #Home img {
+        height: 35vh;
+    }
+}
+@media (max-width:550px) {
+    #Home img {
+        height: 0vh;
+    }
+}
+#Mission {
+    margin: 5vh 0;
+    height: 90vh;
+    background-image: url(./images/Mission.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Mission > button {
+    background-color: transparent;
+    color: white;
+    width: 40%;
+    text-align: center;
+    border: 0;
+}
+#Mission h2 {
+    letter-spacing: 0;
+    font-size: 4rem;
+    margin: 0;
+}
+
+@media (max-width:1250px) {
+    #Mission {
+        height: 70vh;
+    }
+    #Mission h2 {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:768px) {
+    #Mission {
+        height: 50vh;
+    }
+    #Mission h2 {
+        font-size: 1.5rem;
+    }
+    #Mission p {
+        font-size: 0.5rem;
+    }
+}
+@media (max-width:420px) {
+    #Mission {
+        height: 30vh;
+    }
+}
+
+#News {
+    padding: 1% 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#News span {font-size: 0.8rem;}
+#News h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+#News p {
+    margin: 1rem 0 2rem 0;
+}
+#News a {
+    background-color: #381752;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1% 3%;
+    border: 0;
+    border-radius: 8px;
+    transition: all 0.15s;
+}
+#News a:hover {
+    scale: 1.1;
+}
+#NewsCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+#NewsCard {
+    max-width: 50vw;
+}
+#NewsCards h3 {
+    font-size: 1.5rem;
+}
+#NewsCards img {
+    max-height: 45vh;
+    width: 100%;
+}
+#NewsCards p {
+    text-align: justify;
+}
+
+@media (max-width:1150px) {
+    #NewsCards img { 
+        max-height: 40vh;
+        max-width: 45vw;
+    }
+}
+@media (max-width:1024px) {
+    #NewsCards img { 
+        max-height: 30vh;
+        max-width: 35vw;
+    }
+}
+@media (max-width:768px) {
+    #NewsCards img { 
+        max-height: 20vh;
+        max-width: 25vw;
+    }
+    #NewsCards h3 {
+        font-size: 1.2rem;
+    }
+    #NewsCards p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:500px) {
+    #News h2 {
+        font-size: 2rem;
+    }
+    #NewsCards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #NewsCards img {
+        max-height: 50vh;
+        max-width: 55vw;
+    }
+    #NewsCards h3 {
+        font-size: 1.5rem;
+    }
+    #NewsCards p {
+        font-size: 1rem;
+    }
+}

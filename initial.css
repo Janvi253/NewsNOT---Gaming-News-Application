@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Madimi+One&display=swap');
+    ul, li, a {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+    }
+    body {
+        color: white;
+        background: linear-gradient(#432498, #5d2250 );
+        font-family: "Inter", sans-serif;
+        margin: 0; padding: 0;
+        scroll-behavior: smooth;
+    }
+    nav {
+        width: 90%;
+        padding: 1% 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-family: "Madimi One", sans-serif;
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: 0px;
+    }
+    .logo > img {
+        width: 100px;
+        height: 80px;  
+    }
+    nav > ul {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+    }
+    nav > button {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        display: none;
+        font-size: 20px;
+        width: 45px;
+        height: 40px;
+    }
+    .nav-link {
+        font-size: 1.2rem;
+        transition: all 0.15s;
+    }
+    .nav-link:hover {
+        scale: 1.1;
+    }
+    @media (max-width:1024px){ 
+        .logo {
+            gap: 0.5rem;
+            font-size: 3rem;
+        }
+        .logo > img {
+            width: 80px;
+        }
+        nav > ul {
+            width: 55%;
+        }
+    }
+    @media (max-width:768px) {
+        .logo > img {
+            width: 40px;
+            height: 40px;
+        }
+        .logo {
+            gap: 0.2rem;
+            font-size: 2rem;
+        }
+        nav > ul {
+            width: 60%;
+        }
+        .nav-link {
+            font-size: 0.8rem;
+        }
+    }
+    @media (max-width:550px) { 
+        nav > ul {
+            display: none;
+        }
+        nav > button {
+            display: block;
+        }
+    }
+    .scrollToTop {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        border: 0;
+        border-radius: 100px;
+        position: fixed;
+        bottom: 5rem;
+        right: 5rem;
+        background-color: #ffffff;
+        display: none;
+    }
+    @media (max-width:1024px) {
+        .scrollToTop {
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.5rem;
+            bottom: 4rem;
+            right: 4rem;
+        }
+    }
+    @media (max-width:768px) {
+        .scrollToTop {
+            bottom: 3rem;
+            right: 3rem;
+        }
+    }
+    @media (max-width:550px) {
+        .scrollToTop {
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.1rem;
+            bottom: 2rem;
+            right: 2rem;
+        }
+    }
+    .active {
+        display: block;
+    }
