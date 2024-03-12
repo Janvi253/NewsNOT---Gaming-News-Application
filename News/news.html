@@ -21,15 +21,15 @@
             <li class="nav-link"> <a href="../index.html#Mission">Mission</a> </li>
             <li class="nav-link"> <a href="../index.html#News">News</a> </li>
             <li class="nav-link"> <a href="">Partners</a> </li>
-            <li class="nav-link"> <a href="">About Us</a> </li>
+            <li class="nav-link"> <a href="../index.html#AboutUs">About Us</a> </li>
         </ul>
         <button>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-bars"></i>
         </button>
     </nav>
 
     <section id="News">
-        <div id="NewsCards"> </div>
+        <div id="NewsCards"></div>
     </section>
 
     <button class="scrollToTop" onclick="scrollToTop()">
@@ -60,6 +60,7 @@
     }
     let adddata= async ()=> {
         let res = await fetch('https://newsapi.org/v2/everything?q=games&apiKey=022f8d38e4194843b6e38a108d2e8c9b');
+        // let res = await fetch('https://api.pexels.com/v1/curated?page=2&per_page=40');
         let data= await res.json();
         data = await data.articles;
         // console.log(data);
@@ -93,4 +94,4 @@
     "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/6081f9a7643fd261d915e189dfcddf4f.jpg",
     "publishedAt": "2024-02-14T15:00:00Z",
     "content": "If you were wondering what Sonys up to after its latest State of Play presentation didnt have much in the way of first-party games, it sounds like there was a reason for that. It looks like PlayStati… [+2662 chars]"
-} -->
+}, -->
