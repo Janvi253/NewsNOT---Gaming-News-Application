@@ -28,6 +28,8 @@
         </button>
     </nav>
 
+    <div id="errors"></div>
+
     <section id="News">
         <div id="NewsCards"></div>
     </section>
@@ -59,24 +61,28 @@
         return img?.complete && img?.naturalHeight !== 0 && img?.naturalWidth !== 0;
     }
     let adddata= async ()=> {
-        let res = await fetch('https://newsapi.org/v2/everything?q=games&apiKey=022f8d38e4194843b6e38a108d2e8c9b');
-        // let res = await fetch('https://api.pexels.com/v1/curated?page=2&per_page=40');
-        let data= await res.json();
-        data = await data.articles;
-        // console.log(data);
+        try {
+            let res = await fetch(`https://newsapi.org/v2/everything?q=games&apiKey=022f8d38e4194843b6e38a108d2e8c9b`);
+            let data= await res.json();
+            data = await data.articles;
+            // console.log(data);
 
-        data.filter((element)=> {
-            return isImageValid(element.urlToImage);
-        })
-        .map((element)=> {
-            // console.log(element);
-            document.getElementById('NewsCards').innerHTML += `<a href= ${element.url} target="_blank"> <div class="Newscard">
-                <img src=${element.urlToImage} alt="">
-                <h3>${element.title}</h3>
-                <p>${element.description}</p>
-            </div> </a>`;
-        });
-
+            data.filter((element)=> {
+                //if(filterBtnHTML == "All" || (element?.title.includes(filterBtnHTML)) ) {
+                    return isImageValid(element.urlToImage);
+                //} 
+            })
+            .map((element)=> {
+                // console.log(element);
+                document.getElementById('NewsCards').innerHTML += `<a href= ${element.url} target="_blank"> <div class="Newscard">
+                    <img src=${element.urlToImage} alt="">
+                    <h3>${element.title}</h3>
+                    <p>${element.description}</p>
+                </div> </a>`;
+            });
+        } catch(err) {
+            console.log("Server Error with API. Try reloading/changing the API KEY.");
+        }
     };
     adddata();
 </script>
@@ -95,3 +101,23 @@
     "publishedAt": "2024-02-14T15:00:00Z",
     "content": "If you were wondering what Sonys up to after its latest State of Play presentation didnt have much in the way of first-party games, it sounds like there was a reason for that. It looks like PlayStati… [+2662 chars]"
 }, -->
+
+<!-- <section id="buttons">
+        <button class="filterBtn filterActive">All</button>
+        <button class="filterBtn">GTA</button>
+        <button class="filterBtn">XBOX</button>
+        <button class="filterBtn">Epic Games</button>
+        <button class="filterBtn">BBC Sports</button>
+    </section> -->
+
+    <!-- let filterBtnHTML= "All";
+    const buttons= document.querySelectorAll(".filterBtn");
+    buttons.forEach((btn)=> {
+        btn.addEventListener("click", (element)=> {
+            buttons.forEach((btn)=> {
+                btn.classList.remove("filterActive");
+            })
+            btn.classList.add("filterActive");
+            filterBtnHTML= btn.innerHTML;
+        });
+    }); -->
